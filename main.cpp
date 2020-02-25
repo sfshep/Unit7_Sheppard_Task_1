@@ -65,8 +65,9 @@ int main()
                   << eOne.eventDate.dayOfMonth << "/"
                   << eOne.eventDate.year;
 
-  cout << "Time: " << eOne.eventTime.month << ":"
+  cout << "\nTime: " << eOne.eventTime.Hour << ":"
                    << eOne.eventTime.Minute << ":"
+                   << eOne.eventTime.Second;
 
   //cout << eOne.eventDate.month << "/" << eOne.eventDate << "/" << eOne.eventDate.year << endl;
   //cout << eOne.eventTime;

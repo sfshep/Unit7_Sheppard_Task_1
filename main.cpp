@@ -37,10 +37,40 @@ int main()
 
   appDate b;
   b.dayOfMonth = 20;
-  b.month = 8;
+  b.month = 8;  //"08" will see it as a string and cause an error.
   b.year = 1964;
   cout << "\nBirthday: " << endl;
   cout << b.month << "/" << b.dayOfMonth << "/" << b.year << endl;
+
+  event eOne;
+  eOne.eventName = "Retirement Celebration";
+  eOne.isUrgent = false;
+  //set the event day
+  eOne.eventDate.dayOfMonth = 24; // instance.memberStruct.memberVariable
+  eOne.eventDate.month = 2;
+  eOne.eventDate.year = 2020;
+  //set the event time
+  eOne.eventTime = t; //use data from t to populate
+  //Print all elements of the even, eOne, to the screen
+
+  cout << "\nElements in the event eOne: " << endl;
+  cout << "\nEvent name: " << eOne.eventName << endl;
+
+  string status = "";
+
+  status = (eOne.isUrgent) ? "yes": "no";
+  cout << "Is the event Urgent ? : " << status << endl;
+
+  cout << "Day: " << eOne.eventDate.month << "/"
+                  << eOne.eventDate.dayOfMonth << "/"
+                  << eOne.eventDate.year;
+
+  cout << "Time: " << eOne.eventTime.month << ":"
+                   << eOne.eventTime.Minute << ":"
+
+  //cout << eOne.eventDate.month << "/" << eOne.eventDate << "/" << eOne.eventDate.year << endl;
+  //cout << eOne.eventTime;
+
 
   return 0;
 }
